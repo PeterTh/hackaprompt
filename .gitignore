@@ -1,5 +1,6 @@
 # models
 *-exl2/
 *-GPTQ/
-# engine
+# engines
 exllamav2/
+tabbyAPI/

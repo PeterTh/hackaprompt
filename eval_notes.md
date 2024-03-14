@@ -48,3 +48,11 @@ Points out more advanced algorithms
 - Runner ups
     * deepseek-coder-33b-instruct-4.0bpw-h6-exl2
 - All others are notably worse
+
+-----------------------------------------
+
+Tabby notes:
+```bash
+source venv/bin/activate
+python main.py
+```
