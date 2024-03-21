@@ -1,3 +1,4 @@
+#!/bin/bash
 cd tabbyAPI
 source venv/bin/activate
 ln -f -s ../$2 config.yml
