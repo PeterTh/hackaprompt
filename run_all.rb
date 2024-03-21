@@ -1,5 +1,6 @@
 require 'time'
 require 'fileutils'
+require 'open3'
 
 configs = [
     # CUDA GPU, port, model
@@ -16,6 +17,6 @@ configs.each do |config|
     # log file with model, port and timestamp
     logfn = "log_#{model}_#{port}_#{Time.now.utc.iso8601}.txt"
     puts "Starting #{model} on gpu #{gpu}, port #{port}, log: #{logfn}"
-    `CUDA_VISIBLE_DEVICES=#{gpu} nohup ./run.sh #{gpu} config.#{port}.#{model}.yml > logs/#{logfn} 2>&1 &`
+    `((nohup ./run.sh #{gpu} config.#{port}.#{model}.yml > logs/#{logfn} 2>&1 &)&)`
     sleep(5) # yes, sleep sync! Pretty horrible (to make sure the config is loaded before the next run)
 end

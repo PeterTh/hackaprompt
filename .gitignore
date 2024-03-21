@@ -4,3 +4,5 @@
 # engines
 exllamav2/
 tabbyAPI/
+# generated
+logs/
